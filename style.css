@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap');
+:root{--forest:#123b30;--deep:#0b2922;--gold:#d7b76b;--cream:#f6f0e3;--muted:#b8c8bc;--panel:#174638}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:radial-gradient(ellipse at top,#1c5140 0,#0d3027 48%,#081f1a 100%);color:var(--cream);font-family:'DM Sans',sans-serif}
+.page{width:min(760px,100%);margin:auto;padding:42px 22px 28px}
+.hero{text-align:center}
+.eyebrow{font-size:10px;letter-spacing:3px;color:var(--gold);font-weight:600}
+.star{color:var(--gold);font-size:26px;margin:16px 0 3px}
+h1,h2{font-family:'Playfair Display',Georgia,serif;font-weight:600}
+h1{font-size:clamp(36px,8vw,57px);line-height:1.1;margin:0;color:#f8f0df}
+.intro{font-size:14px;line-height:1.8;color:#d0dbd0;margin:15px 0 12px}
+.rule{display:flex;align-items:center;gap:12px;justify-content:center;color:var(--gold);margin:15px auto}
+.rule:before,.rule:after{content:"";height:1px;width:68px;background:#a88c50;opacity:.65}
+.unlock-note{font-size:12px;line-height:1.7;color:#e4d7b9;margin:0 0 29px}
+.unlock-note span{font-size:10px;color:#aabbb0}
+.calendar-wrap{background:rgba(7,30,24,.42);border:1px solid rgba(215,183,107,.32);border-radius:20px;padding:22px 20px 16px;box-shadow:0 18px 55px #04150f55}
+.month-line{display:flex;justify-content:space-between;color:var(--gold);font-size:12px;letter-spacing:2px;font-weight:600;margin:0 2px 17px}
+.weekdays,.calendar-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px}
+.weekdays{text-align:center;color:#aebfb2;font-size:9px;letter-spacing:1px;margin-bottom:9px}
+.day{min-height:67px;border:1px solid rgba(215,183,107,.3);border-radius:11px;background:linear-gradient(145deg,#1b4a3c,#12382e);color:#f6eddb;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;cursor:pointer;transition:transform .18s,border-color .18s,background .18s;position:relative}
+.day:not(:disabled):active{transform:scale(.96)}
+.day:not(:disabled):hover{border-color:var(--gold);background:#235744}
+.day .number{font-family:'Playfair Display',Georgia,serif;font-size:23px}
+.day .symbol{font-size:10px;color:var(--gold)}
+.day:disabled{cursor:not-allowed;background:#102d25;border-color:#29483d;color:#71877a}
+.day:disabled .number{opacity:.55}
+.day.special{border-color:#d7b76b;background:linear-gradient(145deg,#66552f,#3e492e);box-shadow:inset 0 0 0 1px #d7b76b33}
+.day.special .symbol{color:#ffe6a2}
+.day.empty{visibility:hidden;pointer-events:none}
+.status{text-align:center;color:#aebfb2;font-size:11px;line-height:1.6;margin:17px 0 0}
+footer{text-align:center;color:#9fb1a4;font-size:10px;line-height:1.8;margin:24px auto 0;max-width:390px}
+footer span{color:var(--gold)}
+.modal{display:none;position:fixed;inset:0;z-index:5;align-items:center;justify-content:center;padding:20px}
+.modal.open{display:flex}
+.modal-backdrop{position:absolute;inset:0;background:#04150fdd;backdrop-filter:blur(5px)}
+.letter-card{position:relative;width:min(440px,100%);padding:34px 28px 25px;background:linear-gradient(155deg,#f8f1e4,#eee2c9);color:#234236;border:1px solid #d7b76b;border-radius:18px;text-align:center;box-shadow:0 24px 80px #0008;animation:appear .25s ease-out}
+@keyframes appear{from{opacity:0;transform:translateY(12px) scale(.98)}to{opacity:1;transform:none}}
+.close{position:absolute;right:13px;top:8px;border:0;background:none;color:#526c5c;font-size:27px;cursor:pointer}
+.letter-sparkle{color:#a78643;font-size:25px}
+.letter-date{font-size:10px;letter-spacing:2px;color:#9a7b3d;margin:9px 0}
+.letter-card h2{font-size:30px;margin:0 0 14px;color:#183e31}
+.letter-message{font-size:14px;line-height:1.85;white-space:pre-line}
+.activity{display:flex;gap:10px;align-items:flex-start;text-align:left;background:#e8ddc6;border-radius:10px;padding:12px 14px;margin-top:20px;font-size:12px;line-height:1.65}
+.activity span{color:#a78643}
+.activity p{margin:0}
+.letter-heart{color:#b18d4b;margin-top:18px}
+@media(max-width:480px){.page{padding:32px 13px 22px}.calendar-wrap{padding:17px 11px 13px}.weekdays,.calendar-grid{gap:5px}.day{min-height:58px;border-radius:9px}.day .number{font-size:20px}.day .symbol{font-size:9px}.weekdays{font-size:8px}.letter-card{padding:30px 21px 22px}}

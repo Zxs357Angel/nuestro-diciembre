@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#123b30">
+  <meta name="description" content="Un detalle especial para acompañarte durante diciembre.">
+  <title>Vista previa · Nuestro diciembre</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon-192.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <div class="eyebrow">UNA PEQUEÑA SORPRESA PARA TI</div>
+      <div class="star">✦</div>
+      <h1>Nuestro diciembre</h1>
+      <p class="intro">31 días, 31 pequeños motivos para sonreír.<br>Abre una casilla cada mañana.</p>
+      <div class="rule"><span>✧</span></div>
+      <p class="unlock-note">Cada día se desbloquea a las <strong>8:00 a. m.</strong><br><span>Hora de Ciudad de México</span></p>
+    </header>
+    <section class="calendar-wrap" aria-label="Calendario de diciembre">
+      <div class="month-line"><span>DICIEMBRE</span><span>2026</span></div>
+      <div class="weekdays" aria-hidden="true">
+        <span>DOM</span><span>LUN</span><span>MAR</span><span>MIÉ</span><span>JUE</span><span>VIE</span><span>SÁB</span>
+      </div>
+      <div id="calendar" class="calendar-grid"></div>
+      <p id="status" class="status" aria-live="polite"></p>
+    </section>
+    <footer>Hecho con cariño, para que diciembre tenga un poquito más de magia. <span>♥</span></footer>
+  </main>
+  <div id="letter" class="modal" aria-hidden="true">
+    <div class="modal-backdrop" data-close></div>
+    <article class="letter-card" role="dialog" aria-modal="true" aria-labelledby="letter-title">
+      <button class="close" type="button" aria-label="Cerrar" data-close>×</button>
+      <div class="letter-sparkle">✧</div>
+      <p id="letter-date" class="letter-date"></p>
+      <h2 id="letter-title"></h2>
+      <p id="letter-message" class="letter-message"></p>
+      <div class="activity"><span>✦</span><p id="letter-activity"></p></div>
+      <div class="letter-heart">♥</div>
+    </article>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
